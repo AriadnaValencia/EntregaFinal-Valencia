@@ -91,3 +91,65 @@ function NumerosParesEImpares() {
   }
 
   NumerosParesEImpares();
+
+
+
+  //SEGUNDA PREENTREGA
+
+
+  class Producto {
+    constructor(nombre, precio, cantidad, categoria, id) {
+      this.nombre = nombre;
+      this.precio = precio;
+      this.cantidad = cantidad;
+      this.categoria = categoria;
+      this.id = id;
+    }
+  }
+
+  //ARRAY VACÍO
+  const productos = [];
+
+
+  //5 OBJETOS
+
+const producto1 = new Producto('Esmaltes', 1800, 80, 'Manicuria', 1);
+const producto2 = new Producto('Repujadores', 1100, 50, 'Herramientas', 2);
+const producto3 = new Producto('Limas', 400, 150, 'Herramientas', 3);
+const producto4 = new Producto('Shampoo', 1650, 15, 'Peluquería', 4);
+const producto5 = new Producto('Acondicionador', 1800, 30, 'Peluquería', 5);
+
+productos.push(producto1);
+productos.push(producto2);
+productos.push(producto3);
+productos.push(producto4);
+productos.push(producto5);
+
+
+productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+
+
+console.log(productos);
+
+//PROCEDIMIENTO DE COMPRA
+
+const seleccionDeProducto = prompt('Hola! Para realizar su compra, puede elegir entre los siguientes productos:');
+
+
+const productoSeleccionado = productos.find((producto) => producto.nombre === productoSeleccionado);
+
+
+if (productoSeleccionado) {
+  alert(
+    `El producto "${productoSeleccionado.nombre}" está preparado para ir a tu domicilio.` +
+    `Costo: $${productoSeleccionado.precio}` +
+    `¡Gracias por tu compra! Vuelva prontos`
+  );
+
+} else {
+  alert('El producto seleccionado no está disponible en nuestra tienda.');
+}
+
+
+
+
