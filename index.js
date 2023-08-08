@@ -111,25 +111,29 @@ function NumerosParesEImpares() {
   const productos = [];
 
 
-  //5 OBJETOS
 
-const producto1 = new Producto('Esmaltes', 1800, 80, 'Manicuria', 1);
-const producto2 = new Producto('Repujadores', 1100, 50, 'Herramientas', 2);
-const producto3 = new Producto('Limas', 400, 150, 'Herramientas', 3);
-const producto4 = new Producto('Shampoo', 1650, 15, 'Peluquería', 4);
-const producto5 = new Producto('Acondicionador', 1800, 30, 'Peluquería', 5);
-
-productos.push(producto1);
-productos.push(producto2);
-productos.push(producto3);
-productos.push(producto4);
-productos.push(producto5);
+  function agregarProducto(nombre, precio, categoria, stock) {
+    const producto = new Producto(nombre, precio, categoria, id);
+    productos.push(producto);
+  }
 
 
-productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+  function ordenarProductosPorNombre() {
+    productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+  }
 
 
-console.log(productos);
+  //MIS PRODUCTOS
+
+nuevosProductos ('Esmaltes', 1800, 80, 'Manicuria', 1);
+nuevosProductos ('Repujadores', 1100, 50, 'Herramientas', 2);
+nuevosProductos ('Limas', 400, 150, 'Herramientas', 3);
+nuevosProductos ('Shampoo', 1650, 15, 'Peluquería', 4);
+nuevosProductos ('Acondicionador', 1800, 30, 'Peluquería', 5);
+
+
+ordenarProductosPorNombre();
+
 
 //PROCEDIMIENTO DE COMPRA
 
@@ -139,15 +143,18 @@ const seleccionDeProducto = prompt('Hola! Para realizar su compra, puede elegir 
 const productoSeleccionado = productos.find((producto) => producto.nombre === productoSeleccionado);
 
 
-if (productoSeleccionado) {
-  alert(
-    `El producto "${productoSeleccionado.nombre}" está preparado para ir a tu domicilio.` +
-    `Costo: $${productoSeleccionado.precio}` +
-    `¡Gracias por tu compra! Vuelva prontos`
-  );
-
-} else {
-  alert('El producto seleccionado no está disponible en nuestra tienda.');
+function comprarProducto(nombreProducto) {
+  const productoEncontrado = productos.find((producto) => producto.nombre === nombreProducto);
+  if (productoEncontrado) {
+    const precioProducto = productoEncontrado.precio;
+    alert(
+      `El producto "${productoEncontrado.nombre}" está preparado para ir a tu domicilio.` +
+      `Costo: $${precioProducto}` +
+      `¡Gracias por tu compra! Vuelva prontos`
+    );
+  } else {
+    alert('El producto seleccionado no está disponible en nuestra tienda.');
+  }
 }
 
 
