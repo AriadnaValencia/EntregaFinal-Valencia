@@ -11,17 +11,18 @@ class Producto {
 }
 
 
-let producto1 = new Producto("Pinceles", 500, "Pinceles para nail art", "1.png");
-let producto2 = new Producto("Top coat", 2.000, "Top coat no cleanse. Elimina el pulido. Acabado espejo.", "2.png");
-let producto3 = new Producto("Pestañas", 1.800, "Set de pestañas para pxp.", "3.png");
-let producto4 = new Producto("Film", 1.100, "Film para servicios de pestañas.", "4.png");
-let producto5 = new Producto("Vaso dappen", 800, "Vaso para humedecer pinceles para nail art y distintos usos en manicuria.", "5.png");
-let producto6 = new Producto("Cepillo", 1.000, "Cepillo para limpieza de polvo, luego del limado.", "6.png");
-let producto7 = new Producto("Aceite", 2.100, "Aceite para cutículas. Restaurador.", "7.png");
-let producto8 = new Producto("Aceite IBD", 1.800, "Aceite de lavanda para humectar cutículas.", "8.png");
-let producto9 = new Producto("Polygel", 2.500, "Polygel para construccion de esculpidas.", "9.png");
-let producto10 = new Producto("Henna", 1.800, "Henna. Ideal para sombreado de cejas.", "10.png");
-
+const productos = [
+    new Producto("Pinceles", 500, "Pinceles para nail art", "./assets/productos/1.png"),
+    new Producto("Top coat", 2000, "Top coat no cleanse. Elimina el pulido. Acabado espejo.", "./assets/productos/2.png"),
+    new Producto("Pestañas", 1800, "Set de pestañas para pxp.", "./assets/productos/3.png"),
+    new Producto("Film", 1100, "Film para servicios de pestañas.", "./assets/productos/4.png"),
+    new Producto("Vaso dappen", 800, "Vaso para humedecer pinceles para nail art y distintos usos en manicuria.", "./assets/productos/5.png"),
+    new Producto("Cepillo", 1000, "Cepillo para limpieza de polvo, luego del limado.", "./assets/productos/6.png"),
+    new Producto("Aceite", 2100, "Aceite para cutículas. Restaurador.", "./assets/productos/7.png"),
+    new Producto("Aceite IBD", 1800, "Aceite de lavanda para humectar cutículas.", "./assets/productos/8.png"),
+    new Producto("Polygel", 2500, "Polygel para construccion de esculpidas.", "./assets/productos/9.png"),
+    new Producto("Henna", 1800, "Henna. Ideal para sombreado de cejas.", "./assets/productos/10.png"),
+]
 
 
 //TARJETAS DE PRODUCTOS
