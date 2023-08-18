@@ -10,6 +10,7 @@ class Producto {
     }
 }
 
+
 let producto1 = new Producto("Pinceles", 500, "Pinceles para nail art", "1.png");
 let producto2 = new Producto("Top coat", 2.000, "Top coat no cleanse. Elimina el pulido. Acabado espejo.", "2.png");
 let producto3 = new Producto("Pestañas", 1.800, "Set de pestañas para pxp.", "3.png");
