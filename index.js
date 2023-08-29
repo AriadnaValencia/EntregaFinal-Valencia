@@ -1,5 +1,3 @@
-let listaDeProductos = [];
-
 const productosContainer = document.getElementById("productos-container");
 
 //PRODUCTOS
@@ -12,6 +10,7 @@ class Producto {
     }
 }
 
+let listaDeProductos = [];
 
 const productos = [
     new Producto("Pinceles", 500, "Pinceles para nail art", "./assets/productos/1.png"),
@@ -25,7 +24,6 @@ const productos = [
     new Producto("Polygel", 2500, "Polygel para construccion de esculpidas.", "./assets/productos/9.png"),
     new Producto("Henna", 1800, "Henna. Ideal para sombreado de cejas.", "./assets/productos/10.png"),
 ]
-
 
 //TARJETAS DE PRODUCTOS
 productos.forEach(producto => {
@@ -82,7 +80,7 @@ function generarTarjetas(productos) {
     productosContainer.innerHTML = productosHTML;
 }
 
-function agregarAlCarrito(productos) {
+function agregarAlCarrito(producto) {
     localStorage.setItem()
 }
 
