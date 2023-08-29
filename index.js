@@ -1,3 +1,5 @@
+let listaDeProductos = [];
+
 const productosContainer = document.getElementById("productos-container");
 
 //PRODUCTOS
