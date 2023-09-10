@@ -179,3 +179,48 @@ footer {
     font-size: 18px;
     margin-left: 40px;
   }
+
+  #carrito-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px; /* Ajusta el ancho según tus preferencias */
+    background-color: #f9f9f9;
+}
+
+
+/* Estilos para el contenedor del carrito */
+.cart-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-width: 300px; /* Ajusta el ancho según tus preferencias */
+  background-color: #f9f9f9;
+  margin-top: 20px; /* Agrega espacio arriba del carrito */
+  border-radius: 5px; /* Agrega bordes redondeados al carrito */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agrega sombra al carrito */
+}
+
+/* Estilos para los elementos de la lista dentro del carrito */
+.cart-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-container li {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* Estilos para el botón de vaciar el carrito */
+#clear-cart-button {
+  background-color: #ff5500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Agrega espacio arriba del botón */
+}
+
+#clear-cart-button:hover {
+  background-color: #ff3300; /* Cambia el color al pasar el cursor */
+}
