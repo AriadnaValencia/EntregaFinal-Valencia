@@ -25,6 +25,17 @@ const productos = [
     new Producto("Henna", 1800, "Henna. Ideal para sombreado de cejas.", "./assets/productos/10.png"),
 ]
 
+async function cargarProductos() {
+    try {
+      const response = await fetch('productos.json');
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Error al cargar los productos:', error);
+      return [];
+    }
+  }
+
 //TARJETAS DE PRODUCTOS
 productos.forEach(producto => {
     const productoCard = document.createElement("div");
@@ -50,26 +61,25 @@ productos.forEach(producto => {
 //FUNCION PARA AGREGAR AL CARRITO
 let cart = [];
 
-function addToCart(productName) {
-    const productToAdd = productos.find(product => product.nombre === productName);
-    if (productToAdd) {
-        const existingProduct = cart.find(product => product.nombre === productName);
+if (productToAdd) {
+    const existingProduct = cart.find(product => product.nombre === productName);
 
-        if (existingProduct) {
-            existingProduct.quantity++;
-        } else {
-            cart.push({
-                id: productToAdd.nombre,
-                name: productToAdd.nombre,
-                price: productToAdd.precio,
-                quantity: 1
-            });
-        }
-
-        console.log(`Se ha agregado "${productToAdd.nombre}" al carrito.`);
-        displayCart();
-        saveCartToLocalStorage();
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cart.push({
+            id: productToAdd.nombre,
+            name: productToAdd.nombre,
+            price: productToAdd.precio,
+            quantity: 1
+        });
     }
+
+    console.log(`Se ha agregado "${productToAdd.nombre}" al carrito.`);
+    displayCart();
+    saveCartToLocalStorage();
+
+    swal("¡Agregado al carrito!", `Se ha agregado "${productToAdd.nombre}" al carrito.`, "success");
 }
 
 //VACIAR EL CARRITO
@@ -78,6 +88,8 @@ function clearCart() {
     console.log('El carrito se ha vaciado.');
     displayCart();
     saveCartToLocalStorage();
+
+    swal("Carrito vaciado", "El carrito se ha vaciado correctamente.", "success");
 }
 
 // CARGAR EL CARRITO EN EL LOCALSTORAGE
